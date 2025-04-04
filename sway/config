@@ -20,11 +20,14 @@ set $term foot
 # on the original workspace that the command was run on.
 set $menu wofi --show run | xargs swaymsg exec --
 
+# This line makes waybar work
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
 # output * bg @datadir@/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-#output * bg ~/Pictures/Wallpapers/horsefield.jpg fill
+output * bg ~/Pictures/HorsesRun.png fill
 # output * bg ~/Pictures/Desktop/orse.png fill # Apparently this horse is paralyzed :/
 #
 # Example configuration:
@@ -207,8 +210,10 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 
+
 bar {
-    swaybar_command swaybar
+    #swaybar_command swaybar
+    swaybar_command waybar
     position top
 }
 #bar {
