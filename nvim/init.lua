@@ -6,7 +6,7 @@ vim.opt.number = true
 
 require ("config.lazy")
 
-vim.cmd.colorscheme "catppuccin-latte"
+vim.cmd.colorscheme "oh-lucy"
 
 -- require ("mason").setup()
 -- require ("mason-lspconfig").setup({
