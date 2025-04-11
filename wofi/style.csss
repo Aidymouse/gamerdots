@@ -1,0 +1,28 @@
+* {
+	color: #f2f2f2;
+	font-family: "GohuFont 14 Nerd Font";
+}
+
+#window {
+	background-color: #333333;
+	color: #f2f2f2;
+}
+
+#input {
+	background-color: #222222;
+	border: none;
+	border-radius: 0px;
+	height: 100px;
+}
+
+#inner-box {
+	background-color: red;
+}
+
+#selected {
+	background-color: #555555;
+	border: none;
+	outline: none;
+	margin: 0px;
+	margin-left: 100px;
+}
