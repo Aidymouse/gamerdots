@@ -7,6 +7,7 @@ return {
 		{ "williamboman/mason.nvim", opts = {} },
 		"williamboman/mason-lspconfig.nvim",
 
+		-- { "ms-jpq/coq_nvim", opts = { coq_settings = { auto_start = "shut-up" } } },
 		"ms-jpq/coq_nvim",
 		--to/"WhoIsSethDaniel/mason-tool-installer.nvim",
 
@@ -17,6 +18,8 @@ return {
 		--"hrsh7th/cmp-nvim-lsp",
 	},
 	config = function()
+		--vim.g.coq_settings = { auto_start = true }
+
 		-- Brief aside: **What is LSP?**
 		--
 		-- LSP is an initialism you've probably heard, but might not understand what it is.
@@ -219,8 +222,7 @@ return {
 			-- But for many setups, the LSP (`ts_ls`) will work just fine
 			-- ts_ls = {},
 			--
-			clangd = {
-			},
+			clangd = {},
 
 			lua_ls = {
 				-- cmd = { ... },

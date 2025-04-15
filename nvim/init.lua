@@ -4,9 +4,11 @@ vim.g.maplocalleader = "\\"
 
 vim.opt.number = true
 
-require ("config.lazy")
+vim.g.coq_settings = { auto_start = "shut-up" }
 
-vim.cmd.colorscheme "oh-lucy"
+require("config.lazy")
+
+vim.cmd.colorscheme("oh-lucy")
 
 -- require ("mason").setup()
 -- require ("mason-lspconfig").setup({
@@ -16,5 +18,3 @@ vim.cmd.colorscheme "oh-lucy"
 -- 		"clangd"
 -- 	}
 -- })
-
-
