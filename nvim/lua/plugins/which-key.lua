@@ -14,10 +14,9 @@ return {
 			end,
 			desc = "Buffer Local Keymaps (which-key)",
 		},
-		{
-			":e",
-			":Explore",
-			desc = "Explore",
-		},
+		{ ":e", ":Explore", desc = "Explore", },
+
+		{ "<Esc>", "<cmd>nohlsearch<CR>" }
+
 	},
 }
