@@ -4,7 +4,8 @@
 }
 
 window#waybar {
-	font-family: "GohuFont 14 Nerd Font";
+	/*font-family: "GohuFont 14 Nerd Font";*/
+	font-family: "Mononoki Nerd Font";
     background-color: transparent;
     border-bottom: 0px;
     color: #ebdbb2;
