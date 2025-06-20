@@ -3,12 +3,14 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 vim.opt.number = true
+vim.opt.relativenumber = true
 
 vim.g.coq_settings = { auto_start = "shut-up" }
 
+
 require("config.lazy")
 
-vim.cmd.colorscheme("oh-lucy")
+vim.cmd.colorscheme("murphy")
 
 -- require ("mason").setup()
 -- require ("mason-lspconfig").setup({
