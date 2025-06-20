@@ -33,8 +33,9 @@ setopt SHARE_HISTORY
 unsetopt EXTENDED_HISTORY
 
 
-if [[ $TERM != "dumb" ]]; then
-  eval "$(/home/aidan/.nix-profile/bin/starship init zsh)"
-fi
+# if [[ $TERM != "dumb" ]]; then
+#   eval "$(/home/aidan/.nix-profile/bin/starship init zsh)"
+# fi
 
-alias -- lg=lazygit
+alias lg=lazygit
+alias gch=git checkout
