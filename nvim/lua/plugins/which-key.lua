@@ -14,9 +14,20 @@ return {
 			end,
 			desc = "Buffer Local Keymaps (which-key)",
 		},
-		{ ":e", ":Explore", desc = "Explore", },
-
-		{ "<Esc>", "<cmd>nohlsearch<CR>" }
-
+		{
+			":e",
+			":Explore",
+			desc = "Explore",
+		},
+		{
+			"<Esc>",
+			"<cmd>nohlsearch<CR>",
+			desc = "Clear Search",
+		},
+		{
+			"<leader>q",
+			vim.diagnostic.setloclist,
+			desc = "Open Diagnostic [Q]uickfix list",
+		},
 	},
 }
