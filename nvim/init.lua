@@ -5,8 +5,7 @@ vim.g.maplocalleader = "\\"
 vim.opt.number = true
 vim.opt.relativenumber = true
 
-vim.g.coq_settings = { auto_start = "shut-up" }
-
+-- vim.g.coq_settings = { auto_start = "shut-up" } -- Happens in lspconfig init now
 
 require("config.lazy")
 

@@ -17,6 +17,11 @@ return {
 		-- Allows extra capabilities provided by nvim-cmp
 		--"hrsh7th/cmp-nvim-lsp",
 	},
+	init = function()
+		vim.g.coq_settings = {
+			auto_start = "shut-up",
+		}
+	end,
 	config = function()
 		--vim.g.coq_settings = { auto_start = true }
 
@@ -238,6 +243,17 @@ return {
 					},
 				},
 			},
+
+			vtsls = {
+				settings = {
+					typescript = {
+						format = { enable = false },
+						preferences = {
+							importModuleSpecifier = "relative",
+						},
+					},
+				},
+			},
 		}
 
 		-- Ensure the servers and tools above are installed
@@ -256,6 +272,7 @@ return {
 		local ensure_installed = vim.tbl_keys(servers or {})
 		vim.list_extend(ensure_installed, {
 			"stylua", -- Used to format Lua code
+			"prettierd",
 		})
 		--require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
