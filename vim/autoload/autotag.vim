@@ -7,7 +7,6 @@ python3 sys.path.insert(0, os.path.dirname(vim.eval('expand("<sfile>")')))
 python3 import autotag
 
 function! autotag#Run()
-	echo "Running autotag!"
    if exists("b:netrw_method")
       return
    endif
