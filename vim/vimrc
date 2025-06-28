@@ -1,0 +1,40 @@
+" Might need to run vim -u ~/.config/vim/vimrc the first time to get the vimrc to load
+
+" Internet told me to do this
+set nocompatible
+
+" Load Plug?
+"set rtp+=~/.config/vim/autoload
+source ~/.config/vim/autoload/plug.vim
+
+" FZF set up
+" set rtp+=usr/local/bin/fzf
+source /usr/share/doc/fzf/examples/plugin/fzf.vim " TODO make this local
+
+
+"call plug#begin()
+
+"Plug '/usr/local/bin/fzf'
+
+"call plug#end()
+
+" Get pretty
+syntax on
+
+" Line Numbers
+set number
+set relativenumber
+
+"filetype plugin on
+"set omnifunc=syntaxcomplete#Complete " Idk if I need this
+
+colorscheme elflord
+
+
+
+" Rebind Leader
+let mapleader = "\<Space>"
+
+""" Keybinds
+" FZF find files my beloved (one day check out https://github.com/junegunn/fzf.vim?tab=readme-ov-file)
+nmap <leader>sf :FZF<Return>
