@@ -10,7 +10,7 @@ vim.g.coq_settings = { auto_start = "shut-up" }
 
 require("config.lazy")
 
-vim.cmd.colorscheme("murphy")
+vim.cmd.colorscheme("elflord")
 
 -- require ("mason").setup()
 -- require ("mason-lspconfig").setup({
