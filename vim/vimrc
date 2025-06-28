@@ -3,14 +3,24 @@
 " Internet told me to do this
 set nocompatible
 
+set rtp^=~/.config/vim
+
 " Load Plug?
 "set rtp+=~/.config/vim/autoload
-source ~/.config/vim/autoload/plug.vim
+"source ~/.config/vim/autoload/plug.vim
 
 " FZF set up
 " set rtp+=usr/local/bin/fzf
 source /usr/share/doc/fzf/examples/plugin/fzf.vim " TODO make this local
 
+"source ~/.config/vim/autoload/autotag.vim
+source ~/.config/vim/plugins/autotag.vim
+
+" Update tags on file save? For c and cpp only
+" Apparently this only works on some files, but it's compelling!
+"au FileType {c,cpp} au BufWritePost <buffer> silent ! [ -e tags ] &&
+    "\ ( awk -F'\t' '$2\!="%:gs/'/'\''/"{print}' tags ; ctags -f- '%:gs/'/'\''/' )
+    "\ | sort -t$'\t' -k1,1 -o tags.new && mv tags.new tags
 
 "call plug#begin()
 
@@ -25,8 +35,8 @@ syntax on
 set number
 set relativenumber
 
-"filetype plugin on
-"set omnifunc=syntaxcomplete#Complete " Idk if I need this
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete " Idk if I need this
 
 colorscheme elflord
 
