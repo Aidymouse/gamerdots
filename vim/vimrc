@@ -5,6 +5,8 @@ set nocompatible
 
 set rtp^=~/.config/vim
 
+set tabstop=4
+
 " Load Plug?
 "set rtp+=~/.config/vim/autoload
 "source ~/.config/vim/autoload/plug.vim
@@ -34,11 +36,14 @@ syntax on
 " Line Numbers
 set number
 set relativenumber
+set shiftwidth=4
 
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete " Idk if I need this
 
-colorscheme elflord
+" colorscheme elflord
+set background=dark
+colorscheme quiet
 
 
 
