@@ -43,7 +43,8 @@ set omnifunc=syntaxcomplete#Complete " Idk if I need this
 
 " colorscheme elflord
 set background=dark
-colorscheme quiet
+set termguicolors
+colorscheme quiet-purple
 
 
 
