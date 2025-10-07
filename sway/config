@@ -27,8 +27,9 @@ exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DE
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
 # output * bg @datadir@/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg ~/Pictures/HorsesRun.png fill
+# output * bg ~/Pictures/HorsesRun.png fill
 # output * bg ~/Pictures/Desktop/orse.png fill # Apparently this horse is paralyzed :/
+output * bg ~/Pictures/catboy_photocardspeech2.png fill
 #
 # Example configuration:
 #
@@ -205,6 +206,8 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+bindsym $mod+greater move workspace to output right
+bindsym $mod+less move workspace to output left
 #
 # Status Bar:
 #

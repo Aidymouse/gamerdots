@@ -44,7 +44,9 @@ set omnifunc=syntaxcomplete#Complete " Idk if I need this
 " colorscheme elflord
 set background=dark
 set termguicolors
-colorscheme quiet-purple
+" colorscheme quiet-purple
+" colorscheme quietblue
+colorscheme quiet
 
 
 
