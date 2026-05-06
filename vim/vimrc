@@ -5,11 +5,13 @@ set nocompatible
 
 set rtp^=~/.config/vim
 
-set tabstop=4
+set tabstop=2
+set shiftwidth=2
 
 " Load Plug?
 "set rtp+=~/.config/vim/autoload
 "source ~/.config/vim/autoload/plug.vim
+
 
 " FZF set up
 " set rtp+=usr/local/bin/fzf
@@ -36,7 +38,7 @@ syntax on
 " Line Numbers
 set number
 set relativenumber
-set shiftwidth=4
+" set shiftwidth=4
 
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete " Idk if I need this
@@ -46,7 +48,8 @@ set background=dark
 set termguicolors
 " colorscheme quiet-purple
 " colorscheme quietblue
-colorscheme quiet
+" colorscheme quiet
+colorscheme monotone
 
 
 
@@ -55,4 +58,16 @@ let mapleader = "\<Space>"
 
 """ Keybinds
 " FZF find files my beloved (one day check out https://github.com/junegunn/fzf.vim?tab=readme-ov-file)
-nmap <leader>sf :FZF<Return>
+" nmap <leader>sf :FZF<Return>
+
+" Sinning
+" Vimspector and mappings
+packadd! vimspector
+
+nmap <leader>dD <Plug>VimspectorContinue
+nmap <leader>db <Plug>VimspectorToggleBreakpoint
+nmap <leader>dB <Plug>VimspectorBreakpoints
+nmap <leader>dS <Plug>VimspectorStepInto
+nmap <leader>ds <Plug>VimspectorStepOver
+nmap <leader>dp <Plug>VimspectorJumpToProgramCounter
+nmap <leader>dR :VimspectorReset<Return>
