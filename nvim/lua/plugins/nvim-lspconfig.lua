@@ -17,11 +17,7 @@ return {
 		-- Allows extra capabilities provided by nvim-cmp
 		--"hrsh7th/cmp-nvim-lsp",
 	},
-	init = function()
-		vim.g.coq_settings = {
-			auto_start = "shut-up",
-		}
-	end,
+	init = function() end,
 	config = function()
 		--vim.g.coq_settings = { auto_start = true }
 
@@ -254,6 +250,8 @@ return {
 					},
 				},
 			},
+
+			omnisharp = {},
 		}
 
 		-- Ensure the servers and tools above are installed
