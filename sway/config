@@ -29,7 +29,7 @@ exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DE
 # output * bg @datadir@/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # output * bg ~/Pictures/HorsesRun.png fill
 # output * bg ~/Pictures/Desktop/orse.png fill # Apparently this horse is paralyzed :/
-output * bg ~/Pictures/catboy_photocardspeech2.png fill
+# output * bg ~/Pictures/catboy_photocardspeech2.png fill
 #
 # Example configuration:
 #
