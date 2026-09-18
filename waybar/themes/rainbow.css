@@ -1,0 +1,232 @@
+* {
+    font-size: 12pt;
+		min-height: 0;
+}
+
+@define-color clock-bg #6a4c93;
+@define-color clock-fg #bdb2ff;
+
+@define-color tray-bg #1982c4;
+@define-color tray-fg #ffffff;
+
+@define-color battery-bg #8ac926;
+@define-color battery-fg #526a40;
+@define-color battery-charging-bg #8ac926;
+@define-color battery-charging-fg #526a40;
+
+@define-color backlight-bg #ffca3a;
+@define-color backlight-fg #cc7a3d;
+
+@define-color sound-bg #ffa600;
+@define-color sound-fg #c7522a;
+
+@define-color load-bg #ff595e;
+@define-color load-fg #6f1926;
+
+
+ 
+window#waybar {
+	/*font-family: "GohuFont 14 Nerd Font";*/
+	font-family: "Mononoki Nerd Font";
+	background-color: black;
+	padding: 0;
+	margin: 0;
+	min-height: 0;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.empty #window {
+    background-color: black;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    /* box-shadow: inset 0 -3px transparent; */
+}
+
+
+#workspaces {
+    background-color: #000000; /* Inactive */
+		padding: 0;
+		margin: 0;
+}
+
+#workspaces button {
+    padding: 0 5px;
+		margin: 0;
+    background-color: transparent;
+		font-size: 1pt;
+		border-radius: 0;
+}
+
+#workspaces button:hover {
+		background-color: blue;
+    color: #ffffff; /* Text color of hovered */
+}
+
+#workspaces button.focused {
+    /* background-color: #665c54; */
+    /* box-shadow: inset 0 -3px #ffffff; */
+		color: #f2f2f2;
+}
+
+/* idea...
+.modules-left > widget:nth-child(1) > #workspaces button.focused {
+    color: @clock-fg;
+}
+.modules-left > widget:nth-child(2) > #workspaces button.focused {
+    color: @tray-fg;
+}
+*/
+
+#workspaces button.urgent {
+	color: #b16286;
+}
+
+/** Right Workspaces **/
+
+#idle_inhibitor,
+#cava,
+#scratchpad,
+#mode,
+#window,
+#clock,
+#battery,
+#backlight,
+#wireplumber,
+#tray,
+#mpris,
+#load {
+		padding: 0 5px;
+}
+
+#custom-sep-load-nothing {
+	color: @load-bg;	
+}
+
+#load {
+	background-color: @load-bg;
+	color: @load-fg;
+}
+
+#custom-sep-load-sound {
+	background-color: @load-bg;
+	color: @sound-bg;
+}
+
+#wireplumber {
+	background-color: @sound-bg;
+	color: @sound-fg;
+}
+
+#custom-sep-sound-backlight {
+	background-color: @sound-bg;
+	color: @backlight-bg;
+}
+
+#backlight {
+	background-color: @backlight-bg;
+	color: @backlight-fg;
+}
+
+#custom-sep-backlight-battery {
+	background-color: @backlight-bg;
+	color: @battery-bg;
+}
+
+#battery {
+	background-color: @battery-bg;
+	color: @battery-fg;
+}
+
+#custom-sep-battery-tray {
+	background-color: @battery-bg;
+	color: @tray-bg;
+}
+
+#tray {
+	background-color: @tray-bg;
+	color: @tray-fg;
+}
+
+#custom-sep-tray-clock {
+	background-color: @tray-bg;
+	color: @clock-bg;
+}
+
+#clock {
+	background-color: @clock-bg;
+	color: @clock-fg;
+}
+
+#mode {
+    background-color: #689d6a;
+    color: #282828;
+    /* box-shadow: inset 0 -3px #ffffff; */
+}
+
+/* Power */
+#battery.charging, #battery.plugged {
+    background-color: @battery-charging-bg;
+    color: @battery-charging-fg;
+}
+
+/** TODO: keyframes for light pulse when charging */
+
+@keyframes blink {
+    to {
+        background-color: #282828;
+        color: #ebdbb2;
+    }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    background-color: #cc241d;
+    color: #ebdbb2;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+#mpris.playing {
+    background-color: #d79921;
+    color: #282828;
+}
+
+#tray menu {
+	background-color: #333333;
+	color: #f2f2f2;
+	border-radius: 0;
+	border: solid 1px #555555;
+}
+
+#scratchpad.empty {
+    background: transparent;
+}
+
