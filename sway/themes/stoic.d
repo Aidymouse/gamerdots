@@ -11,5 +11,5 @@ client.placeholder      #1D2021 #0C0C0C $fg     #000000   #0C0C0C
 # Keeps title bar but gets rid of menu
 default_border normal 0 
 
-gaps inner 5px
-gaps outer 5px
+# gaps inner 5px
+# gaps outer 5px
