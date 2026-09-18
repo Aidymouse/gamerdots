@@ -15,10 +15,10 @@ set shiftwidth=2
 
 " FZF set up
 " set rtp+=usr/local/bin/fzf
-source /usr/share/doc/fzf/examples/plugin/fzf.vim " TODO make this local
+" source /usr/share/doc/fzf/examples/plugin/fzf.vim " TODO make this local
 
 "source ~/.config/vim/autoload/autotag.vim
-source ~/.config/vim/plugins/autotag.vim
+" source ~/.config/vim/plugins/autotag.vim
 
 " Update tags on file save? For c and cpp only
 " Apparently this only works on some files, but it's compelling!
@@ -62,7 +62,7 @@ let mapleader = "\<Space>"
 
 " Sinning
 " Vimspector and mappings
-packadd! vimspector
+" packadd! vimspector
 
 nmap <leader>dD <Plug>VimspectorContinue
 nmap <leader>db <Plug>VimspectorToggleBreakpoint
