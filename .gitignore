@@ -10,6 +10,7 @@
 !sway/
 !waybar/
 !fonts/
+!wofi/
 
 !installit.sh
 !install_right_stuff_ubuntu.sh
