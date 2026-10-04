@@ -60,6 +60,8 @@ let mapleader = "\<Space>"
 " FZF find files my beloved (one day check out https://github.com/junegunn/fzf.vim?tab=readme-ov-file)
 " nmap <leader>sf :FZF<Return>
 
+nmap <leader>q :copen<Return>
+
 " Sinning
 " Vimspector and mappings
 " packadd! vimspector
@@ -71,3 +73,4 @@ nmap <leader>dS <Plug>VimspectorStepInto
 nmap <leader>ds <Plug>VimspectorStepOver
 nmap <leader>dp <Plug>VimspectorJumpToProgramCounter
 nmap <leader>dR :VimspectorReset<Return>
+
