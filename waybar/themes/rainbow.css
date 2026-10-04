@@ -70,8 +70,7 @@ button {
 }
 
 #workspaces button:hover {
-  background-color: blue;
-  color: #ffffff; /* Text color of hovered */
+  color: white;
 }
 
 #workspaces button.focused {
