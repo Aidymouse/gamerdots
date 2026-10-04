@@ -1,1 +1,18 @@
-librewolf/
+# Turn to whitelist
+*
+!*/
+
+!.gitignore
+
+!nvim/
+!vim/
+!foot/
+!sway/
+!waybar/
+!fonts/
+
+!installit.sh
+!install_right_stuff_ubuntu.sh
+!put-stuff-in-right-place.sh
+!helpful.md
+
