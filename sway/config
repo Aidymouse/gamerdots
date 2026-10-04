@@ -18,10 +18,16 @@ set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu wofi --show run | xargs swaymsg exec --
+set $menu wmenu-run \
+ -n 444444 -N 000000 \
+ -p "[Hi]" -M 000000 \
+ -s ffffff -S 000000 \
+ -f "BigBlueTerm Plus Nerd Font 9"
 
-# This line makes waybar work
-exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+ # | xargs swaymsg exec -- # idk if i need the xargs bit
+
+# This line makes waybar work - still needed?
+# exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
 ### Output configuration
 #
@@ -29,7 +35,7 @@ exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DE
 # output * bg @datadir@/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # output * bg ~/Pictures/HorsesRun.png fill
 # output * bg ~/Pictures/Desktop/orse.png fill # Apparently this horse is paralyzed :/
-# output * bg ~/Pictures/catboy_photocardspeech2.png fill
+output * bg ~/Pictures/catboy_photocardspeech2.png fill
 #
 # Example configuration:
 #
@@ -273,6 +279,7 @@ set $clear #ffffff00
 # Pink Theme
 #include themes/yellowtheme.d
 include themes/stoic.d
+
 
 # Start Keyring
 #exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
