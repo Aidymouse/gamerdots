@@ -27,7 +27,7 @@ set $menu wmenu-run \
  # | xargs swaymsg exec -- # idk if i need the xargs bit
 
 # This line makes waybar work - still needed?
-# exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
 ### Output configuration
 #
