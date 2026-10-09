@@ -4,14 +4,15 @@
 
 !.gitignore
 
-!nvim/
-!vim/
+!nvim/*
+!vim/*
 vim/.netrwhist
-!foot/
-!sway/
-!waybar/
-!fonts/
-!wofi/
+
+!foot/*
+!sway/*
+!waybar/*
+!fonts/*
+!wofi/*
 
 !installit.sh
 !install_right_stuff_ubuntu.sh
