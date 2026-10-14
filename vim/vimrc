@@ -61,6 +61,8 @@ let mapleader = "\<Space>"
 " nmap <leader>sf :FZF<Return>
 
 nmap <leader>q :copen<Return>
+nmap <leader>n :cnext<Return>
+nmap <leader>N :cprev<Return>
 
 " Sinning
 " Vimspector and mappings
